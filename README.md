@@ -93,6 +93,12 @@ The template includes three main workflows:
    - Configurable to keep a certain number of recent versions
    - Can be run manually or on a schedule
 
+## 🤝 Contributing
+
+We welcome contributions! All commits must be GPG signed and follow the
+[conventional commit](https://www.conventionalcommits.org/) format.
+See [CONTRIBUTING.md](CONTRIBUTING.md) for detailed instructions.
+
 ## 🙏 Acknowledgments
 
 - [act CLI tool](https://github.com/nektos/act) for local GitHub Actions testing

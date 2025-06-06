@@ -5,12 +5,24 @@ BOT_NAME="github-actions[bot]"
 BOT_EMAIL="41898282+github-actions[bot]@users.noreply.github.com"
 KEY_COMMENT="GitHub Actions bot (TheRobBrennan)"
 
-PASSPHRASE="d3f3nd!t"
-# # Prompt for passphrase
-# echo "Enter passphrase for new GPG key:"
-# read -s PASSPHRASE
-# echo "Confirm passphrase:"
-# read -s PASSPHRASE_CONFIRM
+# Pasphrase can be provided via the PASSPHRASE environment variable
+# or entered interactively when running this script.
+if [ -z "$PASSPHRASE" ]; then
+  echo "Enter passphrase for new GPG key:"
+  read -s PASSPHRASE
+  echo "Confirm passphrase:"
+  read -s PASSPHRASE_CONFIRM
+
+  if [ "$PASSPHRASE" != "$PASSPHRASE_CONFIRM" ]; then
+    echo "Error: Passphrases do not match"
+    exit 1
+  fi
+
+  if [ -z "$PASSPHRASE" ]; then
+    echo "Error: Passphrase cannot be empty"
+    exit 1
+  fi
+fi
 
 # if [ "$PASSPHRASE" != "$PASSPHRASE_CONFIRM" ]; then
 #     echo "Error: Passphrases do not match"
