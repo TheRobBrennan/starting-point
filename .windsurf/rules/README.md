@@ -1,3 +1,7 @@
+---
+trigger: always_on
+---
+
 # Windsurf Global Rules
 
 This directory contains global Windsurf rules that can be shared across all projects. These rules are designed to standardize workflows and practices across different repositories.
