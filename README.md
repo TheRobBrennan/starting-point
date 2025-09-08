@@ -20,7 +20,7 @@ A clean starting point for new projects with pre-configured GitHub Actions workf
 
 ## 🛠️ Prerequisites
 
-- Node.js 20.0.0 or later
+- Node.js
 - npm
 - [Docker Desktop](https://www.docker.com/products/docker-desktop/)
 - [act CLI tool](https://github.com/nektos/act) (for local GitHub Actions and Workflow testing in isolated Docker containers)
@@ -40,15 +40,8 @@ This project includes GitHub Actions workflows that can be tested locally using 
 
 ### Available Test Commands
 
-- `npm test` - Run all workflow tests
-- `npm run test:workflows` - Test all workflows
-- `npm run test:workflows:pr-title` - Test PR title check with minor version bump
-- `npm run test:workflows:pr-title:major` - Test PR title check with major version bump
-- `npm run test:workflows:pr-title:minor` - Test PR title check with minor version bump
-- `npm run test:workflows:pr-title:patch` - Test PR title check with patch version bump
-- `npm run test:workflows:pr-title:invalid` - Test PR title check with invalid PR title
-- `npm run test:workflows:version-bump` - Test version bump workflow
-- `npm run test:workflows:ghcr-cleanup` - Test GHCR cleanup workflow
+- `npm test` - Run all tests and GitHub workflows
+- `npm run test:workflows` - Only test GitHub workflows
 
 ## 🤖 GitHub Actions
 
