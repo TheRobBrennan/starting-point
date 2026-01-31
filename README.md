@@ -17,6 +17,9 @@ A clean starting point for new projects with pre-configured GitHub Actions workf
   - Local workflow testing with [act CLI](https://github.com/nektos/act)
   - Semantic versioning enforcement
   - Conventional commit standards
+- **Configuration Files**
+  - `.gitignore` - Comprehensive ignore patterns for Node.js projects
+  - `.markdownlint.json` - Markdown linting configuration
 
 ## 🛠️ Prerequisites
 
@@ -62,6 +65,8 @@ This repository includes the following GitHub Actions workflows:
 2. **Customize the template for your project**
    - Update the `package.json` with your project details
    - Modify the README.md to describe your project
+   - Review and customize `.gitignore` for your specific project needs
+   - Adjust `.markdownlint.json` if you need different markdown linting rules
    - Adjust the Windsurf rules in `.windsurf/rules/` to match your project's needs
 
 3. **Start developing**

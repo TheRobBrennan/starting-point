@@ -25,11 +25,39 @@ All commits pushed to this repository must be GPG signed. Use `git commit -S` if
 2. **Follow Conventional Commits**
    - Use the format `type(scope): message` for commit titles and PR titles.
    - Examples: `feat(ui): add login form`, `fix(api): handle 500 error`.
+   - Breaking changes: Add `!` after the type (e.g., `feat!: breaking change`) for major version bumps
 3. **Run Tests**
    - Execute `npm test` before opening a pull request. Tests rely on [act](https://github.com/nektos/act) and Docker.
    - Only basic workflow tests are included in this template.
 4. **Open a Pull Request**
    - Fill out the provided PR template.
    - Ensure your commits are signed and all checks pass.
+
+## Repository Configuration
+
+For repository maintainers, ensure these GitHub Actions settings are configured:
+
+1. **Workflow Permissions** (Settings → Actions → General):
+
+   ```md
+   Workflow permissions:
+   ☑️ Read and write permissions
+   ☑️ Allow GitHub Actions to create and approve pull requests
+   ```
+
+2. **Fork Pull Request Workflows**:
+
+   ```md
+   Run workflows from fork pull requests:
+   ⚠️ Configure based on your security requirements
+   ```
+
+3. **Access**:
+
+   ```md
+   Repository Access:
+   ○ Not accessible (recommended for private repos)
+   ○ Accessible from repositories owned by your organization
+   ```
 
 We appreciate all issues and PRs! For more details on local workflow testing see [`.github/docs/TESTING.md`](.github/docs/TESTING.md).
