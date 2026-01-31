@@ -19,6 +19,7 @@ To share these rules with other projects:
 
 ## Available Rules
 
+- **code_commit_rules.md**: Strict policies preventing automatic code commits by AI assistants and automated tooling
 - **git_workflow_rules.md**: Standardized Git workflow practices including branch naming conventions and pull request creation processes
 
 ## Best Practices
