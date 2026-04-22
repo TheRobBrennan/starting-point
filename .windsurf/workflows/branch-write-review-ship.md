@@ -49,11 +49,14 @@ Use this workflow any time you want to capture and ship notes, ideas, quotes, or
    gh pr diff <PR_NUMBER>
    ```
 
-7. Watch GitHub CI/CD:
+7. Auto-approve the PR using the GitHub CLI, then watch CI:
 
    ```bash
+   gh pr review <PR_NUMBER> --approve
    gh pr checks <PR_NUMBER> --watch
    ```
+
+   > **Note:** GitHub blocks self-approval (`Review: Can not approve your own pull request`). On solo repos without required reviewers, skip the approve step and go straight to `gh pr checks --watch` — the merge will still succeed if branch protection doesn't require approval.
 
    - If CI passes, merge the PR and delete the remote branch:
 
